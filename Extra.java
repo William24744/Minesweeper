@@ -1,7 +1,7 @@
 public class Extra {
     public static int numberFlags(int position, boolean[] flag) {
         int number = 0;
-        if (position == 0) {
+        if (position == 0) { // corners
             if (flag[1] == true) {
                 number++;
             }
@@ -46,19 +46,88 @@ public class Extra {
                 number++;
             }
             if (flag[position - 9] == true) {
-
+                number++;
             }
             if (flag[position + 1] == true) {
-
+                number++;
             }
             if (flag[position + 10] == true) {
-
+                number++;
             }
             if (flag[position + 11] == true) {
-
+                number++;
             }
-        } else if (position % 10 == 0) { // ceiling
+        } else if (position < 10) { // ceiling
+            if (flag[position - 1] == true) {
+                number++;
+            }
+            if (flag[position + 1] == true) {
+                number++;
+            }
+            if (flag[position + 9] == true) {
+                number++;
+            }
+            if (flag[position + 10] == true) {
+                number++;
+            }
+            if (flag[position + 11] == true) {
+                number++;
+            }
+        } else if (position % 10 == 9) { // right side
+            if (flag[position - 11] == true) {
+                number++;
+            }
             if (flag[position - 10] == true) {
+                number++;
+            }
+            if (flag[position - 1] == true) {
+                number++;
+            }
+            if (flag[position + 9] == true) {
+                number++;
+            }
+            if (flag[position + 10] == true) {
+                number++;
+            }
+        } else if (position < 10) { // floor
+            if (flag[position - 1] == true) {
+                number++;
+            }
+            if (flag[position + 1] == true) {
+                number++;
+            }
+            if (flag[position + 9] == true) {
+                number++;
+            }
+            if (flag[position + 10] == true) {
+                number++;
+            }
+            if (flag[position + 11] == true) {
+                number++;
+            }
+        } else {
+            if (flag[position - 11] == true) {
+                number++;
+            }
+            if (flag[position - 10] == true) {
+                number++;
+            }
+            if (flag[position - 9] == true) {
+                number++;
+            }
+            if (flag[position - 1] == true) {
+                number++;
+            }
+            if (flag[position + 1] == true) {
+                number++;
+            }
+            if (flag[position + 9] == true) {
+                number++;
+            }
+            if (flag[position + 10] == true) {
+                number++;
+            }
+            if (flag[position + 11] == true) {
                 number++;
             }
         }
