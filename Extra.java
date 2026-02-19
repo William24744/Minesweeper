@@ -89,20 +89,20 @@ public class Extra {
             if (flag[position + 10] == true) {
                 number++;
             }
-        } else if (position < 10) { // floor
+        } else if (position > 89) { // floor
+            if (flag[position - 11] == true) {
+                number++;
+            }
+            if (flag[position - 10] == true) {
+                number++;
+            }
+            if (flag[position - 9] == true) {
+                number++;
+            }
             if (flag[position - 1] == true) {
                 number++;
             }
             if (flag[position + 1] == true) {
-                number++;
-            }
-            if (flag[position + 9] == true) {
-                number++;
-            }
-            if (flag[position + 10] == true) {
-                number++;
-            }
-            if (flag[position + 11] == true) {
                 number++;
             }
         } else {

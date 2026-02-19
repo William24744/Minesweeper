@@ -7,7 +7,7 @@ public class Methods {
         Random rand = new Random();
         for (int i = 0; i < 100; i++) {
             flag[i] = false;
-            space[i] = '□';
+            space[i] = '|';
         }
         for (int i = 0; i < 10; i += 0) {
             int random = rand.nextInt(100);
@@ -30,19 +30,16 @@ public class Methods {
     }
 
     public boolean revealSpace(int position) throws IllegalArgumentException {
-        if (flag[position] == true) {
+        if (position < 0 || position >= 100) {
+            throw new IllegalArgumentException("Space does not exist.");
+        } else if (space[position] == 'F') {
+            throw new IllegalArgumentException("A flag is placed there.");
+        } else if (space[position] != '|') {
+            throw new IllegalArgumentException("Space has already been revealed.");
+        } else if (flag[position] == true) {
             return true;
         } else {
-            if (space[position] == 'F') {
-                throw new IllegalArgumentException("A flag is placed there.");
-            }
-            if (position < 0 || position >= 100) {
-                throw new IllegalArgumentException("Space does not exist.");
-            }
-            if (space[position] != '□') {
-                throw new IllegalArgumentException("Space has already been revealed.");
-            }
-            space[position] = (char) (Extra.numberFlags(position, this.flag));
+            space[position] = (char) ('0' + Extra.numberFlags(position, this.flag));
             return false;
         }
     }
@@ -52,8 +49,8 @@ public class Methods {
             throw new IllegalArgumentException("Space does not exist.");
         }
         if (space[position] == 'F') {
-            space[position] = '□';
-        } else if (space[position] == '□') {
+            space[position] = '|';
+        } else if (space[position] == '|') {
             space[position] = 'F';
         } else {
             throw new IllegalArgumentException("Space has already been revealed.");
