@@ -254,7 +254,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position + 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -262,7 +262,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position + 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -270,7 +270,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
+                    autoClear(position + 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -279,7 +279,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position - 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -287,7 +287,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position + 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -295,7 +295,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 9);
                 if (game.space[9] == 0) {
-                    autoClear(9, game);
+                    autoClear(position + 9, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -303,7 +303,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position + 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -311,7 +311,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
+                    autoClear(position + 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -320,7 +320,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
+                    autoClear(position - 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -328,7 +328,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position - 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -336,7 +336,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position - 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -344,7 +344,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 9);
                 if (game.space[9] == 0) {
-                    autoClear(9, game);
+                    autoClear(position + 9, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -352,7 +352,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position + 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -361,10 +361,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
-                if (game.space[11] == 0) {
-                    autoClear(11, game);
-                }
+                    autoClear(position - 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -372,7 +369,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position - 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -380,7 +377,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 9);
                 if (game.space[9] == 0) {
-                    autoClear(9, game);
+                    autoClear(position - 9, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -388,7 +385,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position - 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -396,7 +393,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position + 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -405,7 +402,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
+                    autoClear(position - 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -413,7 +410,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position - 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -421,7 +418,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 9);
                 if (game.space[9] == 0) {
-                    autoClear(9, game);
+                    autoClear(position - 9, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -429,7 +426,7 @@ public class Extra {
             try {
                 game.revealSpace(position - 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position - 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -437,7 +434,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 1);
                 if (game.space[1] == 0) {
-                    autoClear(1, game);
+                    autoClear(position + 1, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -445,7 +442,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 9);
                 if (game.space[9] == 0) {
-                    autoClear(9, game);
+                    autoClear(position + 9, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -453,7 +450,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 10);
                 if (game.space[10] == 0) {
-                    autoClear(10, game);
+                    autoClear(position + 10, game);
                 }
             } catch (IllegalArgumentException e) {
 
@@ -461,7 +458,7 @@ public class Extra {
             try {
                 game.revealSpace(position + 11);
                 if (game.space[11] == 0) {
-                    autoClear(11, game);
+                    autoClear(position + 11, game);
                 }
             } catch (IllegalArgumentException e) {
 
