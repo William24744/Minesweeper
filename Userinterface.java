@@ -16,21 +16,22 @@ public class Userinterface {
                 x = in.nextInt();
                 if (x > 9 || x < 0) {
                     System.out.println("Error: Space does not exist.");
-                }
-                System.out.println("Enter a y position");
-                y = in.nextInt();
-                System.out.println("1:Place/Remove flag or 2:Reveal Space?");
-                z = in.nextInt();
-                int position = (10*y + x);
-                if (z == 1) {
-                    game.flag(position);
-                } else if (z == 2) {
-                    if (game.revealSpace(position) == true) {
-                        System.out.println("You lost.");
-                        break;
-                    }
                 } else {
-                    System.out.println("Error: Invalid input.");
+                    System.out.println("Enter a y position");
+                    y = in.nextInt();
+                    System.out.println("1:Place/Remove flag or 2:Reveal Space?");
+                    z = in.nextInt();
+                    int position = (10*y + x);
+                    if (z == 1) {
+                        game.flag(position);
+                    } else if (z == 2) {
+                        if (game.revealSpace(position) == true) {
+                            System.out.println("You lost.");
+                            break;
+                        }
+                    } else {
+                        System.out.println("Error: Invalid input.");
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Error: " + e.getMessage());
