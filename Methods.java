@@ -40,6 +40,9 @@ public class Methods {
             return true;
         } else {
             space[position] = (char) ('0' + Extra.numberFlags(position, this.flag));
+            if (space[position] == '0') {
+                Extra.autoClear(position, this);
+            }
             return false;
         }
     }
@@ -55,5 +58,23 @@ public class Methods {
         } else {
             throw new IllegalArgumentException("Space has already been revealed.");
         }
+    }
+    public int[] getMines() {
+        int x = 0;
+        int[] listofmines = new int[10];
+        for (int i = 0; i < 10; i++) {
+            while (true) {
+                if (flag[x] == true) {
+                    listofmines[i] = x;
+                    x++;
+                    break;
+                }
+                x++;
+            }
+        }
+        return listofmines;
+    }
+    public char[] getSpaces() {
+        return space;
     }
 }

@@ -37,6 +37,10 @@ public class Userinterface {
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e.getMessage());
             }
+            if (Extra.win(game) == true) {
+                System.out.println("You win!");
+                break;
+            }
         }
         in.close();
         System.exit(0);
