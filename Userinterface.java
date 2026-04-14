@@ -12,13 +12,12 @@ public class Userinterface {
         while (l == true) {
             System.out.println("What difficulty would you like the game? Easy, Medium, Hard, or Extreme?");
             String difficulty = in.nextLine();
-            l = false;
-            in.next();
             try {
                 game = new Methods(difficulty);
+                l = true;
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e);
-                l = false;
+                l = true;
             }
         }
         while (true) {
@@ -32,8 +31,10 @@ public class Userinterface {
                 } else {
                     System.out.println("Enter a y position");
                     y = in.nextInt();
+                    in.nextLine();
                     System.out.println("1:Place/Remove flag or 2:Reveal Space?");
                     z = in.nextInt();
+                    in.nextLine();
                     int position = (10*y + x);
                     if (z == 1) {
                         game.flag(position);
