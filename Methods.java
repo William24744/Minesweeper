@@ -3,17 +3,36 @@ public class Methods {
     char[] space = new char[100];
     boolean[] flag = new boolean[100];
 
-    public Methods() {
-        Random rand = new Random();
-        for (int i = 0; i < 100; i++) {
-            flag[i] = false;
-            space[i] = '|';
+    public Methods(String difficulty) throws IllegalArgumentException {
+        int flags = 0;
+        boolean c = false;
+        if (difficulty == "Easy") {
+            flags = 10;
+            c = true;
+        } else if (difficulty == "Medium") {
+            flags = 25;
+            c = true;
+        } else if (difficulty == "Hard") {
+            flags = 50;
+            c = true;
+        } else if (difficulty == "Extreme") {
+            flags = 75;
+            c = true;
+        } else {
+            throw new IllegalArgumentException("" + difficulty + " is not a valid difficulty.");
         }
-        for (int i = 0; i < 10; i += 0) {
-            int random = rand.nextInt(100);
-            if (flag[random] == false) {
-                flag[random] = true;
-                i++;
+        if (c == true) {
+            Random rand = new Random();
+            for (int i = 0; i < 100; i++) {
+                flag[i] = false;
+                space[i] = '|';
+            }
+            for (int i = 0; i < flags; i += 0) {
+                int random = rand.nextInt(100);
+                if (flag[random] == false) {
+                    flag[random] = true;
+                    i++;
+                }
             }
         }
     }

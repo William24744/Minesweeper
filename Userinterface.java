@@ -2,12 +2,25 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Userinterface {
     public static void main(String[] args) {
-        Methods game = new Methods();
+        Scanner in = new Scanner(System.in);
         int x;
         int y;
         int z;
-        Scanner in = new Scanner(System.in);
+        Methods game = null;
+        boolean l = true;
         System.out.println("Welcome to Minesweeper. Put a flag on all of the mines to win.");
+        while (l == true) {
+            System.out.println("What difficulty would you like the game? Easy, Medium, Hard, or Extreme?");
+            String difficulty = in.nextLine();
+            l = false;
+            in.next();
+            try {
+                game = new Methods(difficulty);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e);
+                l = false;
+            }
+        }
         while (true) {
             game.showMap();
             try {
