@@ -14,7 +14,7 @@ public class Userinterface {
             String difficulty = in.nextLine();
             try {
                 game = new Methods(difficulty);
-                l = true;
+                l = false;
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e);
                 l = true;
@@ -45,6 +45,7 @@ public class Userinterface {
                         }
                     } else {
                         System.out.println("Error: Invalid input.");
+                        in.nextLine();
                     }
                 }
             } catch (InputMismatchException e) {

@@ -6,16 +6,16 @@ public class Methods {
     public Methods(String difficulty) throws IllegalArgumentException {
         int flags = 0;
         boolean c = false;
-        if (difficulty == "Easy") {
+        if (difficulty.equals("Easy")) {
             flags = 10;
             c = true;
-        } else if (difficulty == "Medium") {
+        } else if (difficulty.equals("Medium")) {
             flags = 25;
             c = true;
-        } else if (difficulty == "Hard") {
+        } else if (difficulty.equals("Hard")) {
             flags = 50;
             c = true;
-        } else if (difficulty == "Extreme") {
+        } else if (difficulty.equals("Extreme")) {
             flags = 75;
             c = true;
         } else {
