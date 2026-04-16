@@ -2,10 +2,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Userinterface {
     public static void main(String[] args) {
+        boolean powerup = true;
         Scanner in = new Scanner(System.in);
         int x;
         int y;
         int z;
+        int hints = 5;
         Methods game = null;
         boolean l = true;
         System.out.println("Welcome to Minesweeper. Put a flag on all of the mines to win.");
@@ -20,6 +22,7 @@ public class Userinterface {
                 l = true;
             }
         }
+        System.out.println("You have one powerup you can use which will clear a 3x3 area of your choosing, and five hints that will reveal the space.");
         while (true) {
             game.showMap();
             try {
@@ -32,7 +35,7 @@ public class Userinterface {
                     System.out.println("Enter a y position");
                     y = in.nextInt();
                     in.nextLine();
-                    System.out.println("1:Place/Remove flag or 2:Reveal Space?");
+                    System.out.println("1:Place/Remove flag, 2:Reveal Space?, or 3:Use Powerup?");
                     z = in.nextInt();
                     in.nextLine();
                     int position = (10*y + x);
@@ -42,6 +45,32 @@ public class Userinterface {
                         if (game.revealSpace(position) == true) {
                             System.out.println("You lost.");
                             break;
+                        }
+                    } else if (z == 3) {
+                        if (position > 99 || position < 0) {
+                            System.out.println("Error: Space does not exist.");
+                        } else {
+                            if (powerup == true) {
+                                if (position % 10 == 0 || position % 10 == 9 || position < 10 || position > 89) {
+                                    System.out.println("Don't use a powerup on the sides or corners!");
+                                } else {
+                                    Powerup.UsePowerup(position, game);
+                                }
+                            } else {
+                                System.out.println("Error: You have no more powerups.");
+                            }
+                        }
+                    } else if (z == 4) {
+                        if (hints < 1) {
+                            System.out.println("Error: You have no more hints.");
+                        } else {
+                            if (position > 99 || position < 0) {
+                            System.out.println("Error: Space does not exist.");
+                            } else {
+                                if (game.revealSpace(position) == true) {
+                                    game.flag(position);
+                                }
+                            }
                         }
                     } else {
                         System.out.println("Error: Invalid input.");
