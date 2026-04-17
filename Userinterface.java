@@ -35,7 +35,7 @@ public class Userinterface {
                     System.out.println("Enter a y position");
                     y = in.nextInt();
                     in.nextLine();
-                    System.out.println("1:Place/Remove flag, 2:Reveal Space?, or 3:Use Powerup?");
+                    System.out.println("1:Place/Remove flag, 2:Reveal Space?, 3:Use Powerup, or 4:Use Hint?");
                     z = in.nextInt();
                     in.nextLine();
                     int position = (10*y + x);
@@ -70,6 +70,7 @@ public class Userinterface {
                                 if (game.revealSpace(position) == true) {
                                     game.flag(position);
                                 }
+                                hints -= 1;
                             }
                         }
                     } else {

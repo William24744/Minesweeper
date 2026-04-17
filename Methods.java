@@ -10,13 +10,13 @@ public class Methods {
             flags = 10;
             c = true;
         } else if (difficulty.equals("Medium")) {
-            flags = 25;
+            flags = 20;
             c = true;
         } else if (difficulty.equals("Hard")) {
-            flags = 50;
+            flags = 30;
             c = true;
         } else if (difficulty.equals("Extreme")) {
-            flags = 75;
+            flags = 50;
             c = true;
         } else {
             throw new IllegalArgumentException("" + difficulty + " is not a valid difficulty.");
