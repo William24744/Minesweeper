@@ -12,7 +12,7 @@ public class Userinterface {
         boolean l = true;
         System.out.println("Welcome to Minesweeper. Put a flag on all of the mines to win.");
         while (l == true) {
-            System.out.println("What difficulty would you like the game? Easy, Medium, Hard, or Extreme?");
+            System.out.println("What difficulty would you like the game? Easy, Medium, or Hard?");
             String difficulty = in.nextLine();
             try {
                 game = new Methods(difficulty);

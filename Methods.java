@@ -15,9 +15,6 @@ public class Methods {
         } else if (difficulty.equals("Hard")) {
             flags = 30;
             c = true;
-        } else if (difficulty.equals("Extreme")) {
-            flags = 50;
-            c = true;
         } else {
             throw new IllegalArgumentException("" + difficulty + " is not a valid difficulty.");
         }
